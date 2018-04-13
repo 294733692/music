@@ -285,6 +285,7 @@ export default {
       const second = this._pad(interval % 60);
       return `${minute}:${second}`;
     },
+    // 对分钟进行补零操作
     _pad(num, n = 2) {
       let len = num.toString().length;
       while (len < n) {
