@@ -73,6 +73,7 @@ export default {
         }
       });
     },
+    
     searchMore() {
       if (!this.hasMore) {
         return;

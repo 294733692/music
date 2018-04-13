@@ -26,6 +26,7 @@ export default class Song {
         return new Promise((resolve, reject) => {
             getLyric(this.mid).then((res) => {
                 if (res.retcode === ERR_OK) {
+                    // 将base64的歌词转化为正常的歌词
                     this.lyric = Base64.decode(res.lyric)
                     resolve(this.lyric)
                 } else {

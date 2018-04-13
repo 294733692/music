@@ -159,6 +159,7 @@ export default {
     enter(ele, done) {
       const { x, y, scale } = this._getPosAndScale();
 
+      // 设置动画帧数
       let animation = {
         0: {
           transform: `translate3d(${x}px,${y}}px,0) scale(${scale})`
@@ -170,9 +171,12 @@ export default {
           transform: `translate3d(0,0,0) scale(1)`
         }
       };
+      // 注册动画
       animations.registerAnimation({
         name: "move",
+        // 插入自定义动画
         animation,
+        // 参数配置
         presets: {
           duration: 400,
           easing: "linear"
@@ -181,6 +185,7 @@ export default {
       animations.runAnimation(this.$refs.cdWrapper, "move", done);
     },
     afterEnter() {
+      // 取消动画
       animations.unregisterAnimation("move");
       this.$refs.cdWrapper.style.animation = "";
     },
