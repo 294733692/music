@@ -3,7 +3,7 @@ import { ERR_OK } from 'api/config'
 import { Base64 } from 'js-base64'
 
 
-
+// 封装song类
 export default class Song {
     constructor({ id, mid, singer, name, album, duration, image, url }) {
         this.id = id,
@@ -36,6 +36,7 @@ export default class Song {
     }
 }
 
+// 封装创建歌曲类，返回自己需要的歌曲信息
 export function createSong(musicData) {
     return new Song({
         id: musicData.songid,

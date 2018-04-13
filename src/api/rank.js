@@ -1,7 +1,7 @@
 import jsonp from 'common/js/jsonp'
 import { commonParams, options } from './config'
 
-
+// 获取热歌榜
 export function getTopList() {
     const url = 'https://c.y.qq.com/v8/fcg-bin/fcg_myqq_toplist.fcg';
 
@@ -13,6 +13,8 @@ export function getTopList() {
     return jsonp(url, data, options)
 }
 
+
+// 获取热歌榜音乐
 export function getMusicTopList(topid){
     const url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg';
 

@@ -2,6 +2,7 @@ import { mapGetters, mapMutations, mapActions } from 'vuex'
 import { playMode } from "common/js/config";
 import { shuffle } from "common/js/util";
 
+// 混入
 export const playlistMixin = {
     computed: {
         ...mapGetters([
@@ -26,6 +27,7 @@ export const playlistMixin = {
     }
 }
 
+// 播放器混入
 export const playerMixin = {
     computed: {
         iconMode() {
@@ -89,7 +91,7 @@ export const playerMixin = {
     }
 }
 
-
+// 搜索混入
 export const searchMixin = {
     data() {
         return {

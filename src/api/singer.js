@@ -18,7 +18,7 @@ export function getSingerListCallback() {
     return jsonp(url, data, options)
 }
 
-
+// 获取歌手详情
 export function getSingerDetail(singerId) {
     const url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_singer_track_cp.fcg';
 
