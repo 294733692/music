@@ -96,11 +96,13 @@ export const deleteSearchHistory = function ({ commit }, query) {
     commit(types.SET_SEARCH_HISTORY, deleteSearch(query));
 }
 
-// 清楚搜索结果
+// 清除搜索结果  ---> 浏览器上也可以清除localStorage.clear();
 export const clearSearchHistory = function ({ commit }) {
     commit(types.SET_SEARCH_HISTORY, clearSearch());
 }
 
+
+// 删除歌曲
 export const deleteSong = function ({ commit, state }, song) {
     let playlist = state.playlist.slice()
     let sequenceList = state.sequenceList.slice()
@@ -121,7 +123,7 @@ export const deleteSong = function ({ commit, state }, song) {
     commit(types.SET_PLAYING_STATE, playingState)
 
 }
-
+// 删除歌曲列表
 export const deleteSongList = function ({ commit }) {
     commit(types.SET_CURRENT_INDEX, -1)
     commit(types.SET_PLAYLIST, [])
@@ -129,7 +131,7 @@ export const deleteSongList = function ({ commit }) {
     commit(types.SET_PLAYING_STATE, false)
 }
 
-
+// 保存播放历史记录
 export const savePlayHistory = function ({ commit }, song) {
     commit(types.SET_PLAY_HISTORY,savePlay(song));
 }

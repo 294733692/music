@@ -119,7 +119,7 @@ export default {
         blur = Math.min(20 * percent, 20);
       }
 
-      //兼容ios系统，css3属性，高斯模糊效果
+      //兼容ios系统，css3属性，高斯模糊效果，
       this.$refs.filter.style[backdrop] = `blur(${blur}px)`;
 
       // 图片图层
